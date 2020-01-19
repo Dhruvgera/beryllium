@@ -75,12 +75,12 @@ TARGET_USES_QTI_CAMERA2CLIENT := true
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-WITH_DEXPREOPT := true
-
-
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI 
-
+# Dex
+ifeq ($(HOST_OS),linux)
+  ifneq ($(TARGET_BUILD_VARIANT),eng)
+    WITH_DEXPREOPT ?= true
+  endif
+endif
 
 # DRM
 TARGET_ENABLE_MEDIADRM_64 := true
