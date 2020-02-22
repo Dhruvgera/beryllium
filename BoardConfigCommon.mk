@@ -10,6 +10,9 @@ BUILD_BROKEN_DUP_RULES := true
 
 COMMON_PATH := device/xiaomi/sdm845-common
 
+PRODUCT_VENDOR_MOVE_ENABLED := true
+SELINUX_IGNORE_NEVERALLOWS := true
+TARGET_EXCLUDE_QCOM_SEPOLICY := true
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -162,6 +165,8 @@ WIFI_DRIVER_STATE_OFF := "OFF"
 WIFI_DRIVER_STATE_ON := "ON"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+WPA_BUILD_HOSTAPD := true
+DISABLE_EAP_PROXY := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/sdm845-common/BoardConfigVendor.mk
