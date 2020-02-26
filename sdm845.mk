@@ -67,6 +67,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
