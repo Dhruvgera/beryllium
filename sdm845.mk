@@ -191,6 +191,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:system/product/etc/permissions/privapp-permissions-hotword.xml
 
+# Gapps permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/privapp-permissions-google-apps.xml:system/product/etc/permissions/privapp-permissions-google-apps.xml
 # IFAA manager
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
